@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<?xml-stylesheet type="text/xsl" href="svg.xsl"?>
 <cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="schema.xsd">
     <firstName>Александр</firstName>
@@ -44,14 +44,18 @@
     </experience>
     
     <educations>
-        <education type="bachelor" from="09.2014" to="10.2018">
+        <education type="bachelor" from="2014" to="2018">
             <institution>South Ural State University</institution>
             <program code="09.03.04">Software Engenering</program>
         </education>
-        <education type="master" from="09.2018">
+        <education type="master" from="2018" to="2020">
             <institution>South Ural State University</institution>
             <program code="00.00.00">Some Program</program>
         </education>
+      <education type="master" from="2003" to="2011">
+        <institution>School</institution>
+        <program code="00.00.00">Some Program</program>
+      </education>
     </educations>
 
     <languages>
