@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="firstName" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="middleName" />
+        <xs:element ref="lastName" />
+        <xs:element ref="birthdate" />
+        <xs:element ref="sex" />
+        <xs:element ref="status" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="photo" />
+        <xs:element ref="address" />
+        <xs:element ref="contacts" />
+        <xs:element ref="objective" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="experience" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="educations" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="languages" />
+        <xs:element ref="skills" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="firstName" type="xs:string" />
+  <xs:element name="middleName" type="xs:string" />
+  <xs:element name="lastName" type="xs:string" />
+  <xs:element name="birthdate" type="xs:string" />
+  <xs:element name="sex" type="xs:string" />
+  <xs:element name="status" type="xs:string" />
+  
+  <xs:element name="photo">
+    <xs:complexType>
+      <xs:attribute name="href" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="country" />
+        <xs:element ref="district" />
+        <xs:element ref="city" />
+        <xs:element ref="street" />
+        <xs:element ref="house" />
+        <xs:element ref="flat" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="zip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="country" type="xs:string" />
+  <xs:element name="district" type="xs:string" />
+  <xs:element name="city" type="xs:string" />
+  <xs:element name="street" type="xs:string" />
+  <xs:element name="house" type="xs:string" />
+  <xs:element name="flat" type="xs:string" />
+  <xs:element name="zip" type="xs:string" />
+  
+  <xs:element name="contacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="phone" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="email" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="smedia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="phone" type="xs:string" />
+  <xs:element name="email" type="xs:string" />
+  <xs:element name="smedia" type="xs:string" />
+  
+  <xs:element name="objective">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="position" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="salary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="position" type="xs:string" />
+  <xs:element name="salary" type="xs:string" />
+  
+  <xs:element name="experience">
+    <xs:complexType>
+      <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element ref="case" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="case">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="position" />
+        <xs:element ref="company" />
+      </xs:sequence>
+      <xs:attribute name="from" type="xs:string" use="required" />
+      <xs:attribute name="to" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="company" type="xs:string" />
+  
+  <xs:element name="educations">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="education" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="education">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="institution" />
+        <xs:element ref="program" />
+      </xs:sequence>
+      <xs:attribute name="from" type="xs:string" use="required" />
+      <xs:attribute name="to" type="xs:string" />
+      <xs:attribute name="type" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="institution" type="xs:string" />
+  <xs:element name="environment" type="xs:string" />
+  <xs:element name="system" type="xs:string" />
+  <xs:element name="platform" type="xs:string" />
+  <xs:element name="language" type="xs:string" />
+  
+  <xs:element name="program">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="code" type="xs:NMTOKEN" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="languages">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="language" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="skills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="environments" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="systems" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="platforms" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="programmingLanguages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="environments">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="environment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="systems">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="system" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="platforms">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="platform" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="programmingLanguages">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="language" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

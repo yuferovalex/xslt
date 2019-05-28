@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+ul li {
+    list-style-type: square;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+}	
+
+.photo {
+    float: none;
+    width: 150px;
+}
+
+.margin-bottom-s {
+    margin-bottom: 20px;
+}
+
+.main-table {
+    border-spacing: 20px 5px;
+}
+        
+.first-col, .second-col {
+    vertical-align: top;
+}
+
+.first-col {
+    width: 200px;
+    color: rgb(152,72,6);
+    text-align: right;
+}
+
+.second-col *:first-child {
+    margin-top: 0;
+}
+
+.border-dashed {
+    border-style: dashed;
+    border-width: 2px;
+    padding: 5px;
+    margin: -5px;
+}

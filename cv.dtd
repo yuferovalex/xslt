@@ -1,0 +1,57 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT cv (firstName,middleName?,lastName,birthdate,sex,status,photo?,
+              address,contacts,objective,experience?,educations?,
+              languages?,skills)>
+
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT middleName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT birthdate (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+  
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo href CDATA #REQUIRED>
+
+<!ELEMENT address (country,district,city,street,house,flat,zip?)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT district (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT house (#PCDATA)>
+<!ELEMENT flat (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+
+<!ELEMENT contacts (phone,email?,smedia*)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT smedia (#PCDATA)>
+
+<!ELEMENT objective (position,salary?)>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+
+<!ELEMENT experience (case)+>
+<!ELEMENT case (position,company)>
+<!ATTLIST case from CDATA #REQUIRED to CDATA #IMPLIED>
+<!ELEMENT company (#PCDATA)>
+
+<!ELEMENT educations (education)*>
+<!ELEMENT education (institution,program)>
+<!ATTLIST education from CDATA #REQUIRED to CDATA #IMPLIED type NMTOKEN #REQUIRED>
+<!ELEMENT institution (#PCDATA)>
+<!ELEMENT environment (#PCDATA)>
+<!ELEMENT system (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT program (#PCDATA)>
+<!ATTLIST program code NMTOKEN #IMPLIED>
+
+<!ELEMENT languages (language)*>
+
+<!ELEMENT skills (environments?,systems?,platforms?,programmingLanguages?)>
+<!ELEMENT environments (environment)*>
+<!ELEMENT systems (system)*>
+<!ELEMENT platforms (platform)*>
+<!ELEMENT programmingLanguages (language)*>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="schema.xsd">
+    <firstName>Александр</firstName>
+    <middleName>Владимирович</middleName>
+    <lastName>Юферов</lastName>
+    <birthdate>16.12.1995</birthdate>
+    <sex>Male</sex>
+    <status>Single</status>
+    <photo href="https://previews.123rf.com/images/grgroup/grgroup1707/grgroup170700124/81412228-colorful-silhouette-of-man-face-with-red-hair-and-beard-vector-illustration.jpg" />
+    
+    <address>
+        <country>Россия</country>
+        <district>Челябинская обл.</district>
+        <city>Челябинск</city>
+        <street>Елькина</street>
+        <house>55</house>
+        <flat>44</flat>
+        <zip>454091</zip>
+    </address>
+    
+    <contacts>
+        <phone>+73512000000</phone>
+        <email>operator@localhost</email>
+        <smedia>https://github.com/yuferovalex</smedia>
+        <smedia>https://vk.com/yuferov_alex</smedia>
+    </contacts>
+    
+    <objective>
+        <position>Младший инженер-разработчик</position>
+        <salary>40000</salary>
+    </objective>
+    
+    <experience>
+        <case from="01.2018" to="02.2019">
+            <position>Программист-стажер</position>
+            <company>ООО Вектор</company>
+        </case>
+        <case from="02.2019">
+            <position>Ни кем</position>
+            <company>Ни где</company>
+        </case>
+    </experience>
+    
+    <educations>
+        <education type="bachelor" from="09.2014" to="10.2018">
+            <institution>South Ural State University</institution>
+            <program code="09.03.04">Software Engenering</program>
+        </education>
+        <education type="master" from="09.2018">
+            <institution>South Ural State University</institution>
+            <program code="00.00.00">Some Program</program>
+        </education>
+    </educations>
+
+    <languages>
+        <language>English</language>
+        <language>Lingua Latina</language>
+    </languages>
+
+    <skills>
+        <environments>
+            <environment>Builder C++</environment>
+            <environment>IntelliJ IDEA</environment>
+        </environments>
+        <systems>
+            <system>Windows</system>
+            <system>CentOS</system>
+        </systems>
+        <platforms>
+            <platform>x86</platform>
+            <platform>ARM</platform>
+            <platform>Alpha</platform>
+        </platforms>
+        <programmingLanguages>
+            <language>C++</language>
+            <language>Java</language>
+        </programmingLanguages>
+    </skills>
+</cv>
